@@ -2,7 +2,7 @@
 
 using System;
 using System.Drawing;
-using System.Drawing.Imaging;
+// using System.Drawing.Imaging;
 using System.Collections.Generic;
 
 /// <summary>
@@ -20,14 +20,16 @@ static class Graphics
     {
         try
         {
-            Bitmap bitmap = new(filename);
-            int width = bitmap.Width, height = bitmap.Height;
-            var bits = bitmap.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
-            int[] result = new int[bitmap.Width * bitmap.Height];
-            System.Runtime.InteropServices.Marshal.Copy(bits.Scan0, result, 0, result.Length);
-            bitmap.UnlockBits(bits);
-            bitmap.Dispose();
-            return (result, width, height, 1);
+            // Bitmap bitmap = new(filename);
+            // int width = bitmap.Width, height = bitmap.Height;
+            // var bits = bitmap.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
+            // int[] result = new int[bitmap.Width * bitmap.Height];
+            // System.Runtime.InteropServices.Marshal.Copy(bits.Scan0, result, 0, result.Length);
+            // bitmap.UnlockBits(bits);
+            // bitmap.Dispose();
+            // return (result, width, height, 1);
+            // @TODO
+            return (null, -1, -1, -1);
         }
         catch (Exception) { return (null, -1, -1, -1); }
     }
@@ -39,11 +41,12 @@ static class Graphics
     /// </summary>
     public static void SaveBitmap(int[] data, int width, int height, string filename)
     {
-        Bitmap result = new(width, height);
-        var bits = result.LockBits(new Rectangle(0, 0, result.Width, result.Height), ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
-        System.Runtime.InteropServices.Marshal.Copy(data, 0, bits.Scan0, data.Length);
-        result.UnlockBits(bits);
-        result.Save(filename);
+        // Bitmap result = new(width, height);
+        // var bits = result.LockBits(new Rectangle(0, 0, result.Width, result.Height), ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
+        // System.Runtime.InteropServices.Marshal.Copy(data, 0, bits.Scan0, data.Length);
+        // result.UnlockBits(bits);
+        // result.Save(filename);
+        // @TODO    
     }
 
     /// <summary>
