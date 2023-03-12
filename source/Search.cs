@@ -62,7 +62,7 @@ static class Search
         Dictionary<byte[], int> visited = new(new StateComparer());
         visited.Add(present, 0);
 
-        PriorityQueue<int, double> frontier = new();
+        MarkovJunior.source.PriorityQueue<int, double> frontier = new();
         Random random = new(seed);
         frontier.Enqueue(0, rootBoard.Rank(random, depthCoefficient));
         int frontierLength = 1;
