@@ -10,7 +10,7 @@ using System.Collections.Generic;
 /// multiple colors; the output pattern may have wildcards, which are not
 /// written to the grid when the rule is applied.
 /// </summary>
-class Rule
+public class Rule
 {
     /// <summary>The width of the input pattern.</summary>
     public int IMX;

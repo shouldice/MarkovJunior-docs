@@ -8,7 +8,7 @@ using System.Xml.Linq;
 /// Base class for nodes in the abstract syntax tree (AST) of a MarkovJunior
 /// program. Nodes are stateful while the interpreter executes the program.
 /// </summary>
-abstract class Node
+public abstract class Node
 {
     /// <summary>
     /// Loads the parameters for this AST node from an XML element. The loading
@@ -84,7 +84,7 @@ abstract class Node
 /// <summary>
 /// Base class for AST nodes which have other AST nodes as children.
 /// </summary>
-abstract class Branch : Node
+public abstract class Branch : Node
 {
     /// <summary>
     /// The parent of this AST node, or <c>null</c> if this is a root node,

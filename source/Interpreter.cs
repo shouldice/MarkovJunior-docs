@@ -8,7 +8,7 @@ using System.Collections.Generic;
 /// Runs a MarkovJunior program, yielding either the final grid state, or the
 /// sequence of grid states.
 /// </summary>
-class Interpreter
+public class Interpreter
 {
     /// <summary>The root AST node of the MarkovJunior program being interpreted.</summary>
     public Branch root;

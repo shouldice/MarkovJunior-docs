@@ -5,7 +5,7 @@ using System.Linq;
 using System.Xml.Linq;
 using System.Collections.Generic;
 
-class Grid
+public class Grid
 {
     /// <summary>The grid's state, as a flat array.</summary>
     public byte[] state;
